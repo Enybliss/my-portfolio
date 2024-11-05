@@ -1,32 +1,85 @@
 import styled from "styled-components";
-import { Link } from "react-scroll"; // Import Link from react-scroll
+import { Link } from "react-scroll"; 
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ setCurrentSection }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleLinkClick = (section) => {
+    setCurrentSection(section); // Update current section
+    setIsOpen(false); // Close the menu on mobile
+  };
+
   return (
     <Nav className="navbar">
       <h2>My Portfolio</h2>
       <MenuIcon onClick={toggleMenu}>
-        &#9776; {/* Simple hamburger menu icon */}
+        &#9776; {/* Hamburger menu icon */}
       </MenuIcon>
       <NavList isOpen={isOpen}>
-        <li><StyledLink to="home" smooth={true} duration={500}>Home</StyledLink></li>
-        <li><StyledLink to="about" smooth={true} duration={500}>About</StyledLink></li>
-        <li><StyledLink to="techstack" smooth={true} duration={500}>Tech Stack</StyledLink></li>
-        <li><StyledLink to="projects" smooth={true} duration={500}>Projects</StyledLink></li>
-        <li><StyledLink to="contact" smooth={true} duration={500}>Contact</StyledLink></li>
+        <li>
+          <StyledLink
+            to="hero"
+            smooth={true}
+            duration={500}
+            onClick={() => handleLinkClick('hero')}
+          >
+            Home
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink
+            to="about"
+            smooth={true}
+            duration={500}
+            onClick={() => handleLinkClick('about')}
+          >
+            About
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink
+            to="techstack"
+            smooth={true}
+            duration={500}
+            onClick={() => handleLinkClick('techstack')}
+          >
+            Tech Stack
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink
+            to="projects"
+            smooth={true}
+            duration={500}
+            onClick={() => handleLinkClick('projects')}
+          >
+            Projects
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink
+            to="contact"
+            smooth={true}
+            duration={500}
+            onClick={() => handleLinkClick('contact')}
+          >
+            Contact
+          </StyledLink>
+        </li>
       </NavList>
     </Nav>
   );
 };
 
 export default Navbar;
+
+
+
 
 const Nav = styled.nav`
   position: fixed;

@@ -8,6 +8,14 @@ const Hero = () => {
         <h1><span className="highlight">Blessing Udebuani</span></h1>
         <p>Front-end Developer</p>
         <h3>Check out my work and get to know me better!</h3>
+        <DownloadButton
+          href="/BLESSING_ENE_UDEBUANI_cv.pdf"  // Link to CV file in public folder
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          Download CV
+        </DownloadButton>
       </Textbox>
       <ProfileImage
         src="https://res.cloudinary.com/df5zacepv/image/upload/v1730478693/pic_fuondw.jpg"
@@ -21,7 +29,7 @@ export default Hero;
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column; /* Stack vertically by default */
+  flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 3rem 1rem;
@@ -29,7 +37,7 @@ const Container = styled.div`
   height: 100vh;
 
   @media (min-width: 768px) {
-    flex-direction: row; /* Side-by-side on larger screens */
+    flex-direction: row;
     justify-content: space-between;
     padding: 3rem 2rem;
     text-align: left;
@@ -86,9 +94,25 @@ const ProfileImage = styled.img`
   margin-top: 2rem;
 
   @media (min-width: 768px) {
-    width: 100%; /* Take up full width of available space */
-    max-width: 500px; /* Increase max width for larger screens */
+    width: 100%;
+    max-width: 500px;
     height: auto;
     margin-top: 0;
+  }
+`;
+
+const DownloadButton = styled.a`
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #FF6347;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #e5533f;
   }
 `;

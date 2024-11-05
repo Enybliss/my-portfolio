@@ -18,6 +18,7 @@ const Contact = () => {
 export default Contact;
 
 const ContactSection = styled.div`
+margin-bottom: 200px;
   padding: 4rem 2rem;
   text-align: center;
   background-color: none;
