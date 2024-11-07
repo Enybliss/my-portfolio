@@ -87,7 +87,7 @@ export default TechStack;
 
 // Styled Components
 const SkillsContainer = styled.div`
-  padding: 2rem;
+  padding:4rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -96,7 +96,7 @@ const SkillsContainer = styled.div`
   background: none;
 
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 `;
 
@@ -110,6 +110,7 @@ const Title = styled.h3`
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
+  margin-top: 1rem;
 
   @media (max-width: 768px) {
     font-size: 1.25rem;
@@ -119,19 +120,19 @@ const Title = styled.h3`
 const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
   justify-items: center;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 0.75rem;
   }
 `;
 
 const LearningGrid = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 `;
 
 const SkillCard = styled.div`
@@ -142,7 +143,7 @@ const SkillCard = styled.div`
   color: #333;
 
   span {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 `;
 
@@ -150,7 +151,7 @@ const Icon = styled.img`
   width: 50px;
   height: 50px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 
   @media (max-width: 768px) {
     width: 40px;

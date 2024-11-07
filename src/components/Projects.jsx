@@ -4,41 +4,10 @@ const Projects = () => {
   const projectList = [
     {
       imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841358/Screenshot_2024-11-04_212027_pz4tdi.png",
-      projectLink: "https://my-portfolio-three-zeta-72.vercel.app/",
+      title: "My Portfolio",
+      liveLink: "https://my-portfolio-three-zeta-72.vercel.app/",
+      codeLink: "https://github.com/Enybliss/my-portfolio.git",
     },
-    {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841345/Screenshot_2024-11-05_221555_p54gzb.png",
-      projectLink: "https://enybliss.github.io/MakeRemote/",
-    },
-    {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841216/Screenshot_2024-11-05_211920_qusyik.png",
-      projectLink: "https://example.com/project-two",
-    },
-
-    {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841216/Screenshot_2024-11-05_212317_vq3mmg.png",
-      projectLink: "https://example.com/project-two",
-    },
-
-    {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841214/Screenshot_2024-11-05_212741_fhw5pe.png",
-      projectLink: "https://example.com/project-two",
-    },
-
-    {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730837823/Screenshot_2024-11-04_212145_n53vho.png",
-      projectLink: "coolors-project-md5s.vercel.app",
-    },
-    {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730837694/weatherapp_swntr4.jpg",
-      projectLink: "https://example.com/project-two",
-    },
-    {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841181/DesktopDarkMode_pwiqqc.jpg",
-      projectLink: "https://example.com/project-two",
-    },
-
-
     // Add more projects as needed
   ];
 
@@ -47,9 +16,17 @@ const Projects = () => {
       <Title>My Projects</Title>
       <ProjectGrid>
         {projectList.map((project, index) => (
-          <ProjectLink key={index} href={project.projectLink} target="_blank" rel="noopener noreferrer">
+          <ProjectCard key={index}>
             <ProjectImage src={project.imageUrl} alt={`Project ${index + 1}`} />
-          </ProjectLink>
+            <CardContent>
+              <ProjectTitle>{project.title}</ProjectTitle>
+              <TechStack>Tech stack: {project.techStack}</TechStack>
+              <ButtonGroup>
+                <ActionButton href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Preview</ActionButton>
+                <ActionButton href={project.codeLink} target="_blank" rel="noopener noreferrer">View Code</ActionButton>
+              </ButtonGroup>
+            </CardContent>
+          </ProjectCard>
         ))}
       </ProjectGrid>
     </ProjectsSection>
@@ -61,26 +38,18 @@ export default Projects;
 const ProjectsSection = styled.section`
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #f9f9f9;
-
-  @media (max-width: 768px) {
-    padding: 3rem 1rem;
-  }
+  background-color: none;
 `;
 
 const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: blueviolet;
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
+  color: #333;
 `;
 
 const ProjectGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 
   @media (max-width: 768px) {
@@ -88,21 +57,66 @@ const ProjectGrid = styled.div`
   }
 `;
 
-const ProjectLink = styled.a`
-  display: block;
-  border-radius: 8px;
+const ProjectCard = styled.div`
+  width: 200px; /* Fixed width */
+  height: 250px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 
   &:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
   }
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100px; /* Reduced height */
   object-fit: cover;
+`;
+
+const CardContent = styled.div`
+  padding: 0.5rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+const ProjectTitle = styled.h3`
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0.5rem 0;
+`;
+
+const TechStack = styled.p`
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+`;
+
+const ActionButton = styled.a`
+  flex: 1;
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #e16838;
+    color: white;
+  }
 `;

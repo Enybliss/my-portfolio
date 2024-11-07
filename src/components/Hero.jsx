@@ -9,7 +9,7 @@ const Hero = () => {
         <p>Front-end Developer</p>
         <h3>Check out my work and get to know me better!</h3>
         <DownloadButton
-          href="/BLESSING_ENE_UDEBUANI_cv.pdf"  // Link to CV file in public folder
+          href="/BLESSING_ENE_UDEBUANI_cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
@@ -32,15 +32,17 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 3rem 1rem;
-  margin-top: 80px;
+  padding: 2rem 1rem;
+  margin: auto; /* Centers vertically */
   height: 100vh;
+  gap: 1.5rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;
     padding: 3rem 2rem;
     text-align: left;
+    gap: 2rem;
   }
 
   span {
@@ -48,62 +50,63 @@ const Container = styled.div`
   }
 `;
 
+
 const Textbox = styled.div`
-  padding: 2rem 0;
+  max-width: 500px;
+  padding: 1.5rem 0;
 
   h2 {
-    font-size: 2rem;
-    line-height: 1;
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
 
   h1 {
-    font-size: 2.5rem;
-    line-height: 1;
+    font-size: 2.3rem;
+    line-height: 1.2;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
   }
 
   h3 {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.4;
   }
 
   @media (min-width: 768px) {
     padding: 2rem;
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
     p, h3 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
   }
 `;
 
 const ProfileImage = styled.img`
   width: 80%;
-  max-width: 300px;
+  max-width: 250px; /* Reduced max width for better fit */
   height: auto;
   border-radius: 10%;
   border: 2px solid #FF6347;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 
   @media (min-width: 768px) {
     width: 100%;
-    max-width: 500px;
-    height: auto;
+    max-width: 450px;
     margin-top: 0;
   }
 `;
 
 const DownloadButton = styled.a`
   display: inline-block;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: #fff;
