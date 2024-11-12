@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-scroll"; 
+import { Link } from "react-scroll";
 import { useState } from "react";
 
 const Navbar = ({ setCurrentSection }) => {
@@ -10,15 +10,15 @@ const Navbar = ({ setCurrentSection }) => {
   };
 
   const handleLinkClick = (section) => {
-    setCurrentSection(section); // Update current section
-    setIsOpen(false); // Close the menu on mobile
+    setCurrentSection(section);
+    setIsOpen(false); // Close menu on item click (for mobile)
   };
 
   return (
-    <Nav className="navbar">
+    <Nav>
       <h2>My Portfolio</h2>
       <MenuIcon onClick={toggleMenu}>
-        &#9776; {/* Hamburger menu icon */}
+        &#9776; {/* Hamburger icon */}
       </MenuIcon>
       <NavList isOpen={isOpen}>
         <li>
@@ -26,7 +26,7 @@ const Navbar = ({ setCurrentSection }) => {
             to="hero"
             smooth={true}
             duration={500}
-            onClick={() => handleLinkClick('hero')}
+            onClick={() => handleLinkClick("hero")}
           >
             Home
           </StyledLink>
@@ -36,7 +36,7 @@ const Navbar = ({ setCurrentSection }) => {
             to="about"
             smooth={true}
             duration={500}
-            onClick={() => handleLinkClick('about')}
+            onClick={() => handleLinkClick("about")}
           >
             About
           </StyledLink>
@@ -46,7 +46,7 @@ const Navbar = ({ setCurrentSection }) => {
             to="techstack"
             smooth={true}
             duration={500}
-            onClick={() => handleLinkClick('techstack')}
+            onClick={() => handleLinkClick("techstack")}
           >
             Tech Stack
           </StyledLink>
@@ -56,7 +56,7 @@ const Navbar = ({ setCurrentSection }) => {
             to="projects"
             smooth={true}
             duration={500}
-            onClick={() => handleLinkClick('projects')}
+            onClick={() => handleLinkClick("projects")}
           >
             Projects
           </StyledLink>
@@ -66,7 +66,7 @@ const Navbar = ({ setCurrentSection }) => {
             to="contact"
             smooth={true}
             duration={500}
-            onClick={() => handleLinkClick('contact')}
+            onClick={() => handleLinkClick("contact")}
           >
             Contact
           </StyledLink>
@@ -78,9 +78,6 @@ const Navbar = ({ setCurrentSection }) => {
 
 export default Navbar;
 
-
-
-
 const Nav = styled.nav`
   position: fixed;
   top: 0;
@@ -91,51 +88,60 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: none;
+  background-color: rgb(227, 178, 240);
+  
 
   h2 {
     color: blueviolet;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.75rem 1.5rem;
+    h2 {
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
   }
 `;
 
 const MenuIcon = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: blueviolet;
   cursor: pointer;
   display: none;
 
   @media (max-width: 768px) {
-    display: block; /* Show menu icon only on smaller screens */
+    display: block;
   }
 `;
 
 const NavList = styled.ul`
   display: flex;
-  margin-right: 0px;
-  padding: 0;
+  align-items: center;
   gap: 20px;
   list-style: none;
-  justify-content: center;
   color: blueviolet;
+  transition: transform 0.3s ease-in-out;
 
-  /* Responsive: hide NavList on small screens unless menu is open */
   @media (max-width: 768px) {
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 0px;
     background-color: white;
     padding: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 8px;
+    width: 90%; /* Make it span the width for better visibility */
+    max-width: 250px; /* Set a max width */
+    gap: 15px; /* Space between menu items */
   }
 
   li {
-    text-decoration: none;
-    transition: color 0.3s ease;
     font-weight: 900;
     color: blueviolet;
+    margin: 0.5rem 0; /* Add vertical spacing between items */
   }
 
   li:hover {
@@ -147,4 +153,10 @@ const StyledLink = styled(Link)`
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    padding: 0.5rem 0; /* Add padding for touch-friendly links */
+  }
 `;

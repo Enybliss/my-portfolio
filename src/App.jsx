@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./static/Navbar";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 import About from "./components/About";
 import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
@@ -9,22 +9,22 @@ import Contact from "./components/Contact";
 import Footer from "./static/Footer";
 
 const App = () => {
-  // State to track the current section
-  const [currentSection, setCurrentSection] = useState("hero");
+  // State to track the current section (this can be used for highlighting active links in Navbar)
+  const [currentSection, setCurrentSection] = useState("home");
 
   return (
     <Router>
-      {/* Pass setCurrentSection to Navbar so it can update the visible section */}
-      <Navbar setCurrentSection={setCurrentSection} />
-      
-      {/* Conditionally render components based on the current section */}
-      {currentSection === "hero" && <Hero />}
-      {currentSection === "about" && <About />}
-      {currentSection === "techstack" && <TechStack />}
-      {currentSection === "projects" && <Projects />}
-      {currentSection === "contact" && <Contact />}
-      
-      {/* Footer is outside of conditional rendering */}
+      {/* Pass currentSection and setCurrentSection to Navbar */}
+      <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
+
+      {/* Render all sections so scrolling works */}
+      <Home setCurrentSection={setCurrentSection} />
+      <About setCurrentSection={setCurrentSection} />
+      <TechStack setCurrentSection={setCurrentSection} />
+      <Projects setCurrentSection={setCurrentSection} />
+      <Contact setCurrentSection={setCurrentSection} />
+
+      {/* Footer */}
       <Footer />
     </Router>
   );

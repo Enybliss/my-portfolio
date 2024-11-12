@@ -5,7 +5,10 @@ const About = () => {
     <Section id="about">
       <Content>
         <ImageBox>
-          <img src="https://res.cloudinary.com/df5zacepv/image/upload/v1730437040/profile_zqrc6m.jpg" alt="Profile" />
+          <img
+            src="https://res.cloudinary.com/df5zacepv/image/upload/v1730437040/profile_zqrc6m.jpg"
+            alt="Profile"
+          />
         </ImageBox>
         <TextBox>
           <h2>About Me</h2>
@@ -30,9 +33,8 @@ const Section = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  min-height: 100vh; /* Takes full viewport height */
+  min-height: 100vh;
   box-sizing: border-box;
-  margin-bottom: 50px; /* Adds space at the bottom */
   background-color: transparent;
   color: #030303;
 `;
@@ -47,14 +49,44 @@ const Content = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 2rem; /* Adds a larger gap for larger screens */
   }
 `;
 
 const TextBox = styled.div`
   flex: 1;
   max-width: 600px;
-  text-align: left;
+  text-align: center;
   padding: 1rem;
+  margin-top: -40px;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+  }
 `;
 
 const ImageBox = styled.div`
@@ -66,7 +98,21 @@ const ImageBox = styled.div`
   img {
     border-radius: 10%;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
+    margin-top: 50px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 300px;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+    img {
+      max-width: 250px; /* Smaller image size on mobile screens */
+  
+    }
   }
 `;
