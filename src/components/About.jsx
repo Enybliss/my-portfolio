@@ -37,6 +37,7 @@ const Section = styled.div`
   box-sizing: border-box;
   background-color: transparent;
   color: #030303;
+  margin-top: 4rem;
 `;
 
 const Content = styled.div`
@@ -49,26 +50,25 @@ const Content = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem; /* Adds a larger gap for larger screens */
+    gap: 3rem; /* Increased gap for better spacing on larger screens */
   }
 `;
 
 const TextBox = styled.div`
   flex: 1;
-  max-width: 600px;
+  max-width: 700px; /* Increased max-width for a wider appearance */
   text-align: center;
-  padding: 1rem;
-  margin-top: -40px;
+  padding: 1.5rem;
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* Slightly larger heading font */
     margin-bottom: 1rem;
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
   }
 
   @media (min-width: 768px) {
@@ -79,12 +79,10 @@ const TextBox = styled.div`
   @media (max-width: 768px) {
     padding: 0.5rem;
     h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
     }
     p {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
+      font-size: 1rem;
     }
   }
 `;
@@ -98,21 +96,19 @@ const ImageBox = styled.div`
   img {
     border-radius: 10%;
     width: 100%;
-    max-width: 500px;
+    max-width: 550px; /* Increased max-width for a wider image */
     height: auto;
     margin-top: 50px;
   }
 
   @media (min-width: 768px) {
-    max-width: 300px;
-    padding: 0.5rem;
+    max-width: 400px; /* Wider image on larger screens */
+    padding: 1rem;
   }
 
   @media (max-width: 768px) {
-    padding: 0.5rem;
     img {
-      max-width: 250px; /* Smaller image size on mobile screens */
-  
+      max-width: 300px; /* Adjusted image size for smaller screens */
     }
   }
 `;

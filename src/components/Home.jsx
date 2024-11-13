@@ -42,10 +42,10 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 0.5rem;
   margin: auto;
   height: 100vh;
-  gap: 1.5rem;
+  gap: 1rem;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -53,6 +53,7 @@ const Container = styled.div`
     padding: 3rem 2rem;
     text-align: left;
     gap: 2rem;
+    
   }
 
   span {
@@ -61,90 +62,77 @@ const Container = styled.div`
 `;
 
 const Textbox = styled.div`
-  max-width: 500px;
-  padding: 1.5rem 0;
+  max-width: 600px; /* Increased width for larger screens */
+  padding: 1rem 0;
 
   h2 {
-    font-size: 1.8rem;
-    line-height: 1.2;
+    font-size: 2rem; /* Larger font size */
+    line-height: 1.3;
     margin-top: 50px;
   }
 
   h1 {
-    font-size: 2.3rem;
-    line-height: 1;
+    font-size: 1.5rem; /* Larger font size */
+    line-height: 1.2;
   }
 
   p {
-    font-size: 1.1rem;
-    line-height: 1;
+    font-size: 1.2rem; /* Larger font size */
+    margin: 0.5rem 0;
   }
 
   h3 {
     font-size: 1rem;
-    line-height: 1;
   }
 
   @media (min-width: 768px) {
     padding: 1rem;
-    h2 {
-      font-size: 1.2rem;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    p,
-    h3 {
-      font-size: 1.2rem;
-    }
-  }
 
-  @media (max-width: 768px) {
-    padding: 1rem 0;
-    gap: 1rem; /* Adds space between text and buttons */
-    text-align: center; /* Ensures center alignment on smaller screens */
+    h2 { font-size: 2rem; }
+    h1 { font-size: 3rem; }
+    p { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
   }
 `;
 
 const ProfileImage = styled.img`
-  width: 80%;
-  max-width: 250px;
+  width: 90%; /* Larger image width */
+  max-width: 280px; /* Increased max width */
   height: auto;
   border-radius: 10%;
-  border: 2px solid #FF6347;
-  margin-top: 1.5rem;
+  border: 3px solid #FF6347; /* Thicker border for better emphasis */
+  margin-top: 1rem;
 
   @media (min-width: 768px) {
-    width: 100%;
-    max-width: 250px;
+    max-width: 350px;
     margin-top: 0;
   }
 
   @media (max-width: 768px) {
-    width: 70%; /* Make image smaller for small screens */
-    max-width: 200px; /* Adjust image size */
+    width: 70%;
+    max-width: 200px;
     margin: 0 auto;
   }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 1rem;
-  margin-top: 1.25rem;
-  justify-content: center; /* Centers buttons on small screens */
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
 
   @media (min-width: 768px) {
-    justify-content: flex-start; /* Align buttons to the left on larger screens */
+    justify-content: flex-start;
   }
 `;
 
 const DownloadButton = styled.a`
-  width: 140px;
-  height: 45px;
+  width: 160px; /* Increased button width */
+  height: 50px; /* Increased button height */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 1.1rem; /* Slightly larger font size */
   color: #fff;
   background-color: #FF6347;
   border-radius: 5px;
@@ -157,12 +145,12 @@ const DownloadButton = styled.a`
 `;
 
 const ContactButton = styled.button`
-  width: 140px;
-  height: 45px;
+  width: 160px;
+  height: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #fff;
   background-color: #FF6347;
   border: none;

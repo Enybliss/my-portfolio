@@ -19,50 +19,16 @@ const TechStack = () => {
   };
 
   return (
-    <SkillsContainer>
+    <SkillsContainer id="techstack"> {/* Add the id here */}
       <SkillSection>
         <Title>Using Now</Title>
         <SkillsGrid>
-          <SkillCard>
-            <Icon src={ICONS.html5} alt="HTML5" />
-            <span>HTML5</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.css3} alt="CSS3" />
-            <span>CSS3</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.sass} alt="SASS" />
-            <span>SASS</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.javascript} alt="JavaScript" />
-            <span>JavaScript</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.react} alt="React" />
-            <span>React</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.bootstrap} alt="Bootstrap" />
-            <span>Bootstrap</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.git} alt="Git" />
-            <span>Git</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.figma} alt="Figma" />
-            <span>Figma</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.vscode} alt="VSCode" />
-            <span>VSCode</span>
-          </SkillCard>
-          <SkillCard>
-            <Icon src={ICONS.github} alt="GitHub" />
-            <span>GitHub</span>
-          </SkillCard>
+          {Object.entries(ICONS).slice(0, 10).map(([key, url]) => (
+            <SkillCard key={key}>
+              <Icon src={url} alt={key} />
+              <span>{key.toUpperCase()}</span>
+            </SkillCard>
+          ))}
         </SkillsGrid>
       </SkillSection>
 
@@ -87,22 +53,23 @@ export default TechStack;
 
 // Styled Components
 const SkillsContainer = styled.div`
-  padding:4rem 2rem;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   text-align: center;
   color: #333;
-  background: none;
+  background-color: none;
 
   @media (max-width: 768px) {
-    padding: 2rem 1rem;
+    padding: 1rem 0.5rem;
   }
 `;
 
 const SkillSection = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 `;
 
@@ -110,7 +77,7 @@ const Title = styled.h3`
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
-  margin-top: 1rem;
+  margin: 0.5rem 0;
 
   @media (max-width: 768px) {
     font-size: 1.25rem;
@@ -120,41 +87,44 @@ const Title = styled.h3`
 const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+  gap: 5rem;
   justify-items: center;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 `;
 
 const LearningGrid = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 
 const SkillCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #333;
 
   span {
     margin-top: 0.25rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #555;
   }
 `;
 
 const Icon = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 45px;
   object-fit: contain;
   margin-bottom: 0.25rem;
 
   @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 `;
