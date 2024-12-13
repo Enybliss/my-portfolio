@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const TechStack = () => {
-  // Define your Cloudinary URLs here
   const ICONS = {
     html5: "https://res.cloudinary.com/df5zacepv/image/upload/v1730782780/html-5_1_zip7ct.svg",
     css3: "https://res.cloudinary.com/df5zacepv/image/upload/v1730785877/css3_qgykvk.svg",
@@ -19,7 +18,7 @@ const TechStack = () => {
   };
 
   return (
-    <SkillsContainer id="techstack"> {/* Add the id here */}
+    <SkillsContainer id="techstack">
       <SkillSection>
         <Title>Using Now</Title>
         <SkillsGrid>
@@ -53,16 +52,15 @@ export default TechStack;
 
 // Styled Components
 const SkillsContainer = styled.div`
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   text-align: center;
   color: #333;
-  background-color: none;
 
   @media (max-width: 768px) {
-    padding: 1rem 0.5rem;
+    padding: 1.5rem;
   }
 `;
 
@@ -70,49 +68,54 @@ const SkillSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 
 const Title = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #333;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem; 
 
   @media (max-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    margin: 0.4rem;
   }
 `;
 
 const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 5rem;
+  gap: 2rem;
   justify-items: center;
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 `;
 
 const LearningGrid = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 `;
 
 const SkillCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.8rem;
-  color: #333;
+  font-size: 0.9rem;
 
   span {
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     font-weight: bold;
-    text-transform: capitalize;
     color: #555;
   }
 `;
@@ -121,10 +124,15 @@ const Icon = styled.img`
   width: 55px;
   height: 45px;
   object-fit: contain;
-  margin-bottom: 0.25rem;
+
 
   @media (max-width: 768px) {
-    width: 35px;
+    width: 40px;
     height: 35px;
+  }
+
+  @media (max-width: 480px) {
+    width: 35px;
+    height: 30px;
   }
 `;
