@@ -152,6 +152,8 @@ const ProjectImage = styled.img`
   height: 150px; /* Reduced height */
   object-fit: cover;
   padding: 0px;
+  display: block;
+  z-index: 0;
 `;
 
 const CardContent = styled.div`
