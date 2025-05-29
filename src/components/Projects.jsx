@@ -73,6 +73,13 @@ const Projects = () => {
       liveLink: " https://enybliss.github.io/Nexcent/",
       codeLink: "https://github.com/Enybliss/Nexcent.git",
     },
+    {
+      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1748534013/Screenshot_2025-05-29_164657_asvxms.png",
+      title: "Farmera",
+      techStack: "ReactJs, Javascript",
+      liveLink: "https://farmera-1.vercel.app/",
+      codeLink: "https://github.com/Faarmera/Farmera-Frontend.git",
+    },
     // Add more projects as needed
   ];
 
