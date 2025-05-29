@@ -70,7 +70,7 @@ const Projects = () => {
       imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1731490071/Screenshot_2024-11-13_102808_yijmn4.png",
       title: "Nexcent",
       techStack: "HTML, CSS, Bootstrap, JavaScript",
-      liveLink: " https://enybliss.github.io/Nexcent/",
+      liveLink: "https://enybliss.github.io/Nexcent/",
       codeLink: "https://github.com/Enybliss/Nexcent.git",
     },
     {
