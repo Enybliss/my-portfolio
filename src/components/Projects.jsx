@@ -3,7 +3,8 @@ import styled from "styled-components";
 const Projects = () => {
   const projectList = [
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841358/Screenshot_2024-11-04_212027_pz4tdi.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730841358/Screenshot_2024-11-04_212027_pz4tdi.png",
       title: "My Portfolio",
       techStack: "HTML, CSS, React",
       liveLink: "https://my-portfolio-three-zeta-72.vercel.app/",
@@ -11,74 +12,99 @@ const Projects = () => {
     },
 
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841345/Screenshot_2024-11-05_221555_p54gzb.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730841345/Screenshot_2024-11-05_221555_p54gzb.png",
       title: "Make Remote",
       techStack: "HTML, CSS, JavaScript",
       liveLink: "https://enybliss.github.io/MakeRemote/",
       codeLink: "https://github.com/Enybliss/MakeRemote.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730837694/weatherapp_swntr4.jpg",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730837694/weatherapp_swntr4.jpg",
       title: "weather App",
       techStack: "React, API, CSS",
       liveLink: "https://weather-app-seven-mu-50.vercel.app/",
       codeLink: "https://github.com/sarahannie/weather_app.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841214/Screenshot_2024-11-05_212741_fhw5pe.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730841214/Screenshot_2024-11-05_212741_fhw5pe.png",
       title: "calculator",
       techStack: "JavaScript, HTML, CSS",
       liveLink: " https://enybliss.github.io/Calculator-project/",
       codeLink: "https://github.com/Enybliss/Calculator-project.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730837823/Screenshot_2024-11-04_212145_n53vho.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730837823/Screenshot_2024-11-04_212145_n53vho.png",
       title: "Coolors",
       techStack: "React, JavaScript",
       liveLink: "https://coolors-project.vercel.app/",
       codeLink: "https://github.com/Enybliss/CoolorsProject.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841216/Screenshot_2024-11-05_212317_vq3mmg.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730841216/Screenshot_2024-11-05_212317_vq3mmg.png",
       title: "Product List",
       techStack: "HTML, CSS, JavaScript",
       liveLink: "https://enybliss.github.io/ProductListProject/",
       codeLink: "https://github.com/Enybliss/ProductListProject.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841181/DesktopDarkMode_pwiqqc.jpg",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730841181/DesktopDarkMode_pwiqqc.jpg",
       title: "country project",
       techStack: "HTML, CSS, JavaScript, API",
       liveLink: "https://enybliss.github.io/countryProject/",
       codeLink: "https://github.com/Enybliss/countryProject.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730841216/Screenshot_2024-11-05_211920_qusyik.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730841216/Screenshot_2024-11-05_211920_qusyik.png",
       title: "Innkeeper App",
       techStack: "React, NodeJS, Express",
       liveLink: "https://inkeeper-app.vercel.app/",
       codeLink: "https://github.com/SamuelOkoduwa/InkeeperApp.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1730439028/Screenshot_2024-10-31_203914_f9sksr.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1730439028/Screenshot_2024-10-31_203914_f9sksr.png",
       title: "Kuda-cloneApp",
       techStack: "React, JavaScript, CSS",
       liveLink: "https://kuda-clone-app.vercel.app/",
       codeLink: "https://github.com/Enybliss/kuda-clone-app.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1731490071/Screenshot_2024-11-13_102808_yijmn4.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1731490071/Screenshot_2024-11-13_102808_yijmn4.png",
       title: "Nexcent",
       techStack: "HTML, CSS, Bootstrap, JavaScript",
       liveLink: "https://enybliss.github.io/Nexcent/",
       codeLink: "https://github.com/Enybliss/Nexcent.git",
     },
     {
-      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1748534013/Screenshot_2025-05-29_164657_asvxms.png",
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1748534013/Screenshot_2025-05-29_164657_asvxms.png",
       title: "Farmera",
       techStack: "ReactJs, Javascript",
       liveLink: "https://farmera-1.vercel.app/",
       codeLink: "https://github.com/Faarmera/Farmera-Frontend.git",
+    },
+    {
+      imageUrl:
+        "https://res.cloudinary.com/df5zacepv/image/upload/v1753815716/Screenshot_2025-07-29_200319_ocgo6l.png",
+      title: "creative design",
+      techStack: "Wordpress",
+      liveLink: "http://blessing.giz-lsetf.com.ng/",
+      // codeLink: "https://github.com/Faarmera/Farmera-Frontend.git",
+    },
+    {
+      imageUrl: "https://res.cloudinary.com/df5zacepv/image/upload/v1753816908/Screenshot_2025-07-29_202309_khqoto.png",
+      title: "SmartDoc",
+      techStack: "ReactJs, tailwindcss Javascript",
+      // liveLink: "https://farmera-1.vercel.app/",
+      codeLink: "https://github.com/smart-doc/SmartDoc-FE.git",
     },
     // Add more projects as needed
   ];
